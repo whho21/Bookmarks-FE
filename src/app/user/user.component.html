@@ -1,0 +1,42 @@
+<body>
+    <header>
+        <a routerLink="/login" (click)="logout()">Log Out</a>
+        <h1>Admin View - Manage Users</h1>
+        <a routerLink="/admin/books">Go to Book Management</a><br>
+        <a routerLink="/admin/users/add">Add User</a><br>
+    </header>
+        <table class="manager">
+            <tr>
+                <th class="head">Name</th>
+                <th class="head">Username</th>
+                <th class="head">Email</th>
+                <th class="head">Contact Number</th>
+                <th class="head">Is Admin</th>
+                <th class="empty"></th><th class="empty"></th>
+            </tr>
+            <tr *ngFor="let user of users; let i=index;">
+                <td>
+                    {{user.name}} 
+                </td>
+                <td>
+                    {{user.username}} 
+                </td>
+                <td>
+                    {{user.email}} 
+                </td>
+                <td>
+                    {{user.contactNo}} 
+                </td>
+                <td>
+                    {{user.isAdmin}} 
+                </td>
+            <td class="buttonbox">
+                <button class="delete" title="delete user"
+                (click)="delete(user.id,user.name)">x</button>
+            </td>
+            <td class="buttonbox">
+                <button class="view" title="view user" ><a routerLink="/admin/users/details/{{user.id}}">>></a></button>
+            </td>
+        </tr>
+    </table>
+    </body>

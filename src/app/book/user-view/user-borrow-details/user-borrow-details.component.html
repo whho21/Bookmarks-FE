@@ -1,0 +1,36 @@
+<body>
+    <div id="topbar">
+        <br>
+        <a id="logout" routerLink="/login" (click)="logout()">Log Out</a><br>
+        <a id="back" routerLink="/books">Back to Main</a>
+
+    </div>
+    <table class="table">
+        <tr id="tableHeaders">
+            <th class="head">Title</th>
+            <th class="head">Author</th>
+            <th class="head">Genre</th>
+            <th class="head">Status</th>
+            <th class="empty"></th>
+        </tr>
+        <tr *ngFor="let book of books; let i=index;">
+            <td>
+                {{book.title}}
+            </td>
+            <td>
+                {{book.author}}
+            </td>
+            <td>
+                {{book.genre}}
+            </td>
+            <td>
+                <b>{{book.status}}</b>
+            </td>
+            <td class="buttonbox">
+                <button class="view" title="View Book">
+                    <a routerLink="/books/details/{{book.id}}">>></a>
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>

@@ -1,0 +1,36 @@
+    "id": "1",
+    "title": "The Awakened",
+    "author": "Hugh Justley",
+    "imageSource": "",
+    "description": "A charming Way to Live",
+    "genre": "Self Help",
+    "borrowedBy": "",
+    "borrowDate": "",
+    "dueDate": "",
+    "status": ""
+
+Changed Constructor for NewUser
+Changed     <p>contact: {{user.contactNo}}</p> in userdetails.component.html
+
+To Do:
+https://codecraft.tv/courses/angular/quickstart/nesting-components-and-inputs/
+Timer
+
+::3:39 am 23/7/2022
+Revise Validation to update AddUser Contact number
+Regular expressions to pattern('^[0-9]{8}$')
+
+Tested and found out that the HTML was calling the creat() function twice:
+Onsubmit = create()
+(click) = "create()"
+
+Found out how to set font colour in HTML5
+<p style="color:blue">This is demo content.</p>
+
+Did further testing and found out that User can borrow books, but not return them.
+Only Admin can returned them. The user cannot see the date borrowed and return dates.
+
+::8:52 am 23/7/2022
+- Aim:
+To do dashboard view.
+

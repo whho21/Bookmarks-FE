@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(102, 0, 0);
+    height: 515px;
+    width: 100%;
+    padding-top: 15%;
+}
+form{
+    border-radius: 15px;
+    background-color: white;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.input{
+    width: 600px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.un{
+    padding-left: auto;
+    padding-right: auto;
+    width: 50%;
+    display: inline-flex;
+}
+.pw{
+    padding-left: auto;
+    padding-right: auto;
+    width: 50%;
+    display: inline-flex;
+}
+#login{
+    width: 10%s;
+    align-self: center;
+    margin-left: 45%;
+    margin-right: 45%;
+    
+}
+#login:hover{
+    background-color: rgb(255, 200, 0);
+}

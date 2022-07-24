@@ -1,0 +1,21 @@
+<body>
+<form class="input-wrapper">
+    <h1>Create Book</h1>
+    <!-- <input  placeholder=" Username "> -->
+    <label for="img">Book cover: </label>
+    <input type="file" name="img" [(ngModel)]="img" onchange="console.log(event.target.files)"><br><br>
+    <label for="title">Book Title: </label>
+    <input type="text" name="title" [(ngModel)]="title"><br><br>
+    <label for="author">Author: </label>
+    <input type="text" name="author" [(ngModel)]="author"><br><br>
+    <label for="genre">Genre: </label>
+    <input type="text" name="genre" [(ngModel)]="genre"><br><br>
+    <label for="desc">Description: </label>
+    <input type="textarea" name="desc" [(ngModel)]="description"><br><br>
+    
+    <div class="input">
+        <input type="button" value="Back" routerLink="/admin/books">
+        <input type="submit" value="Create" (click)="create()">
+    </div>
+</form>
+</body>

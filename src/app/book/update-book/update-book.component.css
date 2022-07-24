@@ -1,0 +1,40 @@
+body {
+    background-image: url(src/assets/img/istockphoto-986463966-612x612.jpg);
+    background-size: 100% 100%;
+    height: 682px;
+}
+
+.second-wrapper {
+    padding-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+textarea {
+    width: 20%;
+    height: 5em;
+}
+
+button {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#back {
+    background-color: crimson;
+    color: white;
+}
+
+#update {
+    background-color: forestgreen;
+    color: white;
+}
+
+#back:hover,
+#update:hover {
+    background-color: rgb(255, 200, 0);
+}

@@ -1,0 +1,76 @@
+body{
+    background-image: url(src\assets\img\253322.jpg);
+    background-size: 100% 100%;
+    min-height: 745px;
+    position: absolute;
+    
+}
+#topbar{
+    background-color: black;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    border-bottom: 0.5px solid white;
+}
+form{
+    padding-top: 15px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+}
+.search{
+    margin-right: 0%;
+    margin-left: 115px;
+}
+table{
+    width: 80%;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 130px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-spacing: 0px;
+   background-color: rgba(255, 255, 255, 0.8);
+}
+#tableHeaders{
+    border-bottom: 2px solid black;
+}
+td{
+    border: 1px solid black;
+    padding: 5px;
+    padding-left: 10px;
+    margin: 0px;
+    background-color: white;
+}
+.buttonbox{
+    padding: 0px;
+    width: 35px;
+}
+.buttonbox button{
+    height: 35px;
+    width: 35px;
+    background-color: forestgreen;
+    color: white;
+}
+.buttonbox button:hover{
+    background-color: rgb(255, 200, 0);
+    color: white;
+}
+.buttonbox button a{
+    color: white;
+}
+#logout, #viewbooks{
+    color: white;
+    text-decoration: underline;
+}
+#logout:hover, #viewbooks:hover{
+    color: rgb(255, 200, 0);
+}
+button[type=submit]{
+    font-weight: bold;
+}
+button[type=submit]:hover{
+    background-color: rgb(255, 200, 0);
+}

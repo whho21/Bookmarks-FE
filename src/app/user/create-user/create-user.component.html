@@ -1,0 +1,61 @@
+<body>
+<form class="input-wrapper" [formGroup]="form">
+    <h1>Create User</h1>
+    <!-- <input  placeholder=" Username "> -->
+    <label for="name">Name: </label>
+    <input type="text" id="name" formControlName="name" class="form-control"><br>
+     <div *ngIf="f['name'].invalid && (f['name'].dirty || f['name'].touched)" class="alert">
+        <div *ngIf="f['name'].errors?.['required']" style="color: red">
+            Name is required.
+        </div>
+        <!-- <div *ngIf="name.errors.minlength"> -->
+            <div *ngIf="f['name'].errors?.['minlength']" style="color: red">
+                Name must be at least 4 characters long.
+        </div>
+    </div>
+    <label for="username">Username: </label>
+    <input type="text" formControlName="username" class="form-control"><br>
+    <div *ngIf="f['username'].invalid && (f['username'].dirty || f['username'].touched)" class="alert">
+        <div *ngIf="f['username'].errors?.['required']" style="color: red">
+            Name is required.
+        </div>
+        <!-- <div *ngIf="name.errors.minlength"> -->
+            <div *ngIf="f['username'].errors?.['minlength']" style="color: red">
+                Name must be at least 4 characters long.
+        </div>
+    </div>
+    <label for="email">Email: </label>
+    <input type="text" formControlName="email" class="form-control"><br>
+    <div *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)" class="alert">
+        <div *ngIf="f['email'].errors?.['email']"style="color: red">
+            Valid Email is required.
+        </div>
+    </div>
+    <label for="contactNo">Contact Number: </label>
+    <input type="text" formControlName="contactNo" class="form-control"><br>
+    <div *ngIf="f['contactNo'].invalid && (f['contactNo'].dirty || f['contactNo'].touched)" class="alert">
+<!--         <div *ngIf="f['contactNo'].errors?.['minlength']" style="color: red">
+            Please enter a number with 8 figures.
+        </div> -->
+        <div *ngIf="f['contactNo'].errors?.['pattern']" style="color: red">
+            Please enter an 8 digit number.
+        </div>
+    </div>
+    <label for="p1">Password: </label>
+    <input type="password" formControlName="password" class="form-control"><br>
+    <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+        <div *ngIf="f['password'].errors?.['required']" style="color: red">Password is required.</div>
+    </div>
+    <label for="p2">Confirm Password: </label>
+    <input type="password" formControlName="confirm_password" class="form-control"><br>
+    <div *ngIf="f['confirm_password'].touched && f['confirm_password'].invalid" class="alert alert-danger">
+        <div *ngIf="f['confirm_password'].errors?.['required']" style="color: red">Password is required.</div>
+        <div *ngIf="f['confirm_password'].errors?.['confirmedValidator']" style="color: red">Password and Confirm Password must be match.</div>
+    </div>
+
+    <div class="input">
+        <input type="button" value="Back" routerLink="/admin/users">
+        <input type="submit" value="Create" (click)="create()">
+    </div>
+</form>
+</body>

@@ -1,0 +1,14 @@
+<body>
+    <div class="container">
+        <button class="backPage" title="Back Page" (click)="backPage()">Back to List</button>
+        <h1>Viewing details for:</h1>
+        <h3>{{user.name}}</h3>
+        <hr>
+        <p>id: {{user.id}}</p>
+        <p>username: {{user.username}}</p>
+        <p>email: {{user.email}}</p>
+        <p>contact: {{user.contactNo}}</p>
+        <br>
+        <a routerLink="/admin/users/update/{{user.id}}">Edit User</a>
+    </div>
+</body>

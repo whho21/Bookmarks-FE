@@ -1,0 +1,21 @@
+<body>
+    <header>
+        <h1>Viewing details for:</h1>
+        <h3>{{book.title}}</h3>
+        <a id="back" routerLink="/books">&#60;&#60; Back to main</a>
+    </header>
+    <div class="content">
+        <img src="../../../assets/img/{{book.imageSource}}" style="height: 175px;"
+            placeholder="No Image available/Image failed to load">
+        <p><span class="label">Availability: </span><b>{{book.status}}</b></p>
+        <div *ngIf='toggleShow()'>
+            <p><span class="label">Due Date: </span><b>{{book.dueDate| date}}</b></p>
+            </div>
+        <p><span class="label">Author: </span>{{book.author}}</p>
+        <p><span class="label">Genre: </span>{{book.genre}}</p>
+        <p><span class="label">Description:</span><br>{{book.description}}</p>
+        <button class="borrow" title="Borrow Book" (click)="borrow(book.id)" [disabled]="toggleShow()">Borrow this
+        
+            book</button>
+    </div>
+</body>

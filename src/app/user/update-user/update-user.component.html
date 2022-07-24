@@ -1,0 +1,23 @@
+<body>
+    <form class="second-wrapper" (ngSubmit)="updateUser()">
+        <label>userData ID:</label>
+        {{this.userData.id}}<br>
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="this.userData.name" name="name" placeholder={{this.userData.name}} /><br><br>
+        <label>Username:</label>
+        <input type="text" [(ngModel)]="this.userData.username" name="username"
+            placeholder={{this.userData.username}} /><br><br>
+        <label>Password:</label>
+        <input type="text" [(ngModel)]="this.userData.password" name="password"
+            placeholder={{this.userData.password}} /><br><br>
+        <label>Contact No: </label>
+        <input type="text" [(ngModel)]="this.userData.contactNo" name="contactNo"
+            placeholder={{this.userData.contactNo}} /><br><br>
+        <label>Is Admin?: </label>
+        <input type="text" [(ngModel)]="this.userData.isAdmin" name="isAdmin"
+            placeholder={{this.userData.isAdmin}} /><br><br>
+
+        <button id="back" routerLink="/admin/books"> Back </button>
+        <button id="update" type="submit">Update</button>
+    </form>
+</body>

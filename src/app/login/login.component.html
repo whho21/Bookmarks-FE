@@ -1,0 +1,17 @@
+<body>
+<form class="input-wrapper">
+    <h2 style="padding: 0px">BookMarks Library System</h2>
+    <p style="font-size: 0.5em">Property of Quest Bibliotheca &copy;</p><br>
+    <div class="input">
+        <span class="un">
+            <label for="username">Username: </label>
+            <input type="text" name="username" [(ngModel)]="username" required="Please enter a username!">
+        </span>
+        <span class="pw">
+            <label for="password">Password: </label>
+            <input type="password" name="password" [(ngModel)]="password" required="Please enter a password!">
+        </span> 
+    </div>
+        <br><input type="submit" value="Log in" id="login" (click)="login()">
+</form>
+</body>

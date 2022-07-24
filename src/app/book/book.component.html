@@ -1,0 +1,38 @@
+<body>
+    <header>
+        <a routerLink="/login" (click)="logout()">Log Out</a>
+        <h1>Admin View - Manage Books</h1>
+        <a routerLink="/admin/users">Go to User Management</a><br>
+        <a routerLink="/admin/books/add">Add Book</a><br>
+    </header>
+    <table class="manager">
+        <tr>
+            <th class="head">Title</th>
+            <th class="head">Author</th>
+            <th class="head">Genres</th>
+            <th class="head">Status</th>
+            <th class="empty"></th><th class="empty"></th>
+        </tr>
+        <tr *ngFor="let book of books; let i=index;">
+                <td>
+                    {{book.title}} 
+                </td>
+                <td>
+                    {{book.author}} 
+                </td>
+                <td>
+                    {{book.genre}} 
+                </td>
+                <td>
+                    {{book.status}} 
+                </td>
+            <td class="buttonbox">
+                <button class="delete" title="delete book"
+                (click)="delete(book.id,book.title)">x</button>
+            </td>
+            <td class="buttonbox">
+                <button class="view" title="view book" ><a routerLink="/admin/books/details/{{book.id}}">>></a></button>
+            </td>
+        </tr>
+    </table>
+    </body>

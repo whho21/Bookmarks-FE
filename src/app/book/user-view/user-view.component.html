@@ -1,0 +1,53 @@
+<body>
+    <div id="topbar">
+        
+    <form [formGroup]="form">
+        <a id="logout" routerLink="/login" (click)="logout()">Log Out</a> 
+        | 
+        <a id="viewbooks" routerLink="/books/borrowedbooks">View your Books</a><br>
+        <span class="sort">
+            <label for="available">Only Display Available</label>
+            <input type="checkbox" name="available" formControlName="available">
+        </span>
+        <span class="search">
+            <input type="text" name="searchTitle" title="Search by Title" placeholder="Title" formControlName="title">
+        </span>
+        <span class="search">
+            <input type="text" name="searchGenre" title="Search by Genre" placeholder="Genre" formControlName="genre">
+        </span>
+        <span class="search">
+            <input type="text" name="searchAuthor" title="Search by Author" placeholder="Author"
+                formControlName="author">
+        </span>
+        <button type="submit" name="submit" class="search" (click)="searchBooks()">Search</button>
+    </form>
+</div>
+    <table class="table">
+        <tr id="tableHeaders">
+            <th class="head">Title</th>
+            <th class="head">Author</th>
+            <th class="head">Genre</th>
+            <th class="head">Status</th>
+            <th class="empty"></th>
+        </tr>
+        <tr *ngFor="let book of books; let i=index;">
+            <td>
+                {{book.title}}
+            </td>
+            <td>
+                {{book.author}}
+            </td>
+            <td>
+                {{book.genre}}
+            </td>
+            <td>
+                <b>{{book.status}}</b>
+            </td>
+            <td class="buttonbox">
+                <button class="view" title="View Book">
+                    <a routerLink="/books/details/{{book.id}}">>></a>
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>

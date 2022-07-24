@@ -1,0 +1,20 @@
+<body>
+    <form class="second-wrapper" (ngSubmit)="updateBook()">
+        <label>Book Title:</label>
+        <input type="text" [(ngModel)]="title" name="title" value="{{book.title}}" /><br><br>
+        <label>Author:</label>
+        <input type="text" [(ngModel)]="author" name="author" value="{{book.author}}" /><br><br>
+        <label>Image:</label>
+        <input type="file" [(ngModel)]="imageSource" name="imageSource" /><br><br>
+        <label>Genre: </label>
+        <input type="text" [(ngModel)]="genre" name="genre" value="{{book.genre}}" /><br><br>
+        <label>Description: </label><br>
+        <textarea [(ngModel)]="description" name="description" value="{{book.description}}"></textarea><br><br>
+        <label>Status: </label>
+        <input type="text" [(ngModel)]="status" name="status" value="{{book.status}}" /><br><br>
+        <br>
+
+        <button id="back" routerLink="/admin/books"> Back </button>
+        <button id="update" type="submit">Update</button>
+    </form>
+</body>
